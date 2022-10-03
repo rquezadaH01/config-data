@@ -7,9 +7,9 @@ spring:
     gateway:
       routes:
         - id: clientes
-          uri: lb/cliente
+          uri: lb://cliente
           predicates:
-            - Path= /clientes/**
+            - Path=/clientes/**
 eureka:
   client:
     fetch-registry: true
