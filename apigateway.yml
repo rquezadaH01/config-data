@@ -7,7 +7,7 @@ spring:
     gateway:
       routes:
         - id: cliente
-          uri: http://localhost:8084/
+          uri: lb://clientes
           predicates:
             - Path=/cliente/**
 eureka:
