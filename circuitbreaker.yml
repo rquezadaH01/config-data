@@ -2,14 +2,7 @@ server:
   port: 8089
 spring:
   application:
-    name: apigateway
-  cloud:
-    gateway:
-      routes:
-        - id: cliente
-          uri: lb://clientes
-          predicates:
-            - Path=/cliente/**
+    name: circuitbreaker
 eureka:
   client:
     fetch-registry: true
